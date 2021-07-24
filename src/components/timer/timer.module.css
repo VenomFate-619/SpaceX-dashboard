@@ -1,0 +1,25 @@
+.countDown {
+  color: rgb(0, 111, 185);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.time > h2 {
+  font-size: 9rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.time > h4 {
+  color: rgb(190, 192, 196);
+  text-transform: uppercase;
+}
+
+.dot {
+  font-size: 7rem;
+}

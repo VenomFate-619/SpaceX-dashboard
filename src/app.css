@@ -1,0 +1,48 @@
+:root {
+  --btn-md-padding: 16px;
+  --btn-sm-padding: 8px;
+}
+/* text */
+:root {
+  --text-main: rgb(6, 107, 173);
+  --text-secondary: rgb(190, 192, 196);
+  
+}
+/* color */
+:root {
+  --main-background: rgb(16, 16, 16);
+  --secondary-background: rgb(6, 107, 173);
+  --main-border: rgb(0,111,185);
+  --main-border-code: 0, 0, 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:'Roboto' , sans-serif;
+}
+
+html,body{
+  background-color: #000000;
+}
+
+a{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h2 {
+  color: var(--text-secondary);
+  font-weight: 100;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 8rem;
+}
+

@@ -1,0 +1,55 @@
+.imgCon {
+  background: url("../../assets/spacex-9dF7pCyaM9s-unsplash.jpg");
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+}
+
+
+
+.captionCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 70%;
+}
+
+.nextLaunch
+{
+    margin-bottom: 1.5rem;
+}
+.nextLaunch > :nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 3rem;
+  font-weight: 300;
+  color: white;
+}
+
+.nextLaunch > :nth-child(2) {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 3rem;
+  color: rgb(0, 111, 185);
+}
+
+.quote
+{
+  position: absolute;
+  bottom: 1rem;
+  color: rgb(190, 192, 196);
+  font-weight: bold;
+ align-self: center;
+  
+}
+.quote > :nth-child(2)
+{
+  color: rgb(6, 107, 173);
+  text-transform: uppercase;
+}

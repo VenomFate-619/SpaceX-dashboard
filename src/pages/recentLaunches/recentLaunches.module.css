@@ -1,0 +1,32 @@
+.top {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.top > h2 {
+  color: var(--text-secondary);
+  font-weight: 100;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+
+.top > button {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.7rem 0.6rem;
+  color: var(--text-main);
+  border: 1px solid var(--text-main);
+  border-radius: 0.5rem;
+  width: auto;
+}
+
+
+
+.main {
+  padding: 12px 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

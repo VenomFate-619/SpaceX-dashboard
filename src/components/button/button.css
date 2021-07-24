@@ -1,0 +1,25 @@
+.btn {
+  padding: var(--btn-md-padding) calc(var(--btn-md-padding) * 2);
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  white-space: nowrap;
+  border: 1px solid var(--main-border);
+  outline: none;
+  text-align: center;
+  border-radius: 0.5rem;
+  letter-spacing: 1px;
+  background: transparent;
+  color: var(--text-main);
+  background-color: transparent;
+  margin: 15px 15px 0 0;
+  transition: all 0.4s ease-in;
+}
+button:hover {
+  box-shadow: inset 0 0 0 50px rgba(var(--main-border-code), 0.2);
+  color: var(--main-background);
+  background-color: var(--secondary-background);
+}
