@@ -1,4 +1,4 @@
-import React from "react";
+import React  , {useEffect} from "react";
 import styles from "./home.module.css";
 import Hero from "../../components/hero/Hero";
 import RecentLaunches from "../recentLaunches/RecentLaunches";
