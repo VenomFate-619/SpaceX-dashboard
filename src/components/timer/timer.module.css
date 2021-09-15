@@ -16,10 +16,19 @@
 }
 
 .time > h4 {
-  color: rgb(190, 192, 196);
+  color: var(--text-secondary);
   text-transform: uppercase;
 }
 
 .dot {
   font-size: 7rem;
+}
+/* media query */
+@media only screen and (max-width: 768px)   {
+  .time > h2 {
+  font-size: 5rem;
+}
+.dot {
+  font-size: 3rem;
+}
 }

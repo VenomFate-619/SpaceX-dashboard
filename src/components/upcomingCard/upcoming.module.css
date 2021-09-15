@@ -30,7 +30,7 @@ h3 {
 .number {
   color: var(--text-secondary);
   font-size: 1.7rem;
-  font-weight: 600;
+  font-weight: 300;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -39,8 +39,8 @@ h3 {
 
 .info {
   display: grid;
-  grid-template-rows: max-content max-content max-content;
-  grid-template-columns: max-content auto;
+  grid-template-rows: max-content max-content;
+  grid-template-columns: max-content max-content max-content max-content;
   grid-gap: 10px 10px;
   margin-top: 10px;
 }
@@ -48,6 +48,10 @@ h3 {
 .info > h2,
 .info >h3 {
   font-size: 1rem;
+  font-weight: 400;
+}
+.info h2{
+  color: rgb(190, 192, 196);
 }
 
 .info h3 {
@@ -59,4 +63,13 @@ h3 {
     position: absolute;
     bottom: -15px;
     right: -5px;
+}
+
+/* media query */
+@media only screen and (max-width: 768px)   {
+  .info
+  {
+    grid-template-rows: max-content max-content max-content;
+    grid-template-columns: max-content max-content;
+  }
 }

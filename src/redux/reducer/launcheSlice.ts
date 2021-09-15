@@ -57,7 +57,7 @@ const launchSlice = createSlice({
     getUpcomingLaunchData(state , action:PayloadAction<QueryResult<Launches>>)
     {
       state.loading = false;
-      state.recentlaunch = action.payload;
+      state.upcomingLaunch = action.payload;
     }
   },
 });
@@ -116,6 +116,8 @@ export const fetchUpcomingLaunch = (): AppThunk => async (dispatch) => {
       launchesUrl,
       UpcomingLaunchesQuery
     );
+    console.log(upcomingLaunchData);
+    
     dispatch(getUpcomingLaunchData(upcomingLaunchData));
   } catch (error) {
     dispatch(getError());
