@@ -23,7 +23,7 @@ h3 {
 
 .date {
   color: var(--text-secondary);
-  font-weight: 100;
+  font-weight: 300;
   margin: 12px 0;
 }
 
@@ -70,6 +70,22 @@ h3 {
   .info
   {
     grid-template-rows: max-content max-content max-content;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: max-content auto;
   }
+}
+@media only screen and (max-width: 481px)   {
+  .number 
+  {
+    top: 60%;
+    font-size: 1rem;
+  }
+  .cardBody > img
+  {
+    width: 60px;
+  }
+  .cardBody
+  {
+    padding: 0.5rem;
+  }
+  
 }

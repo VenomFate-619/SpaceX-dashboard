@@ -10,7 +10,6 @@ const RecentLaunches: React.FC = () => {
   const dispatch = useAppDispatch();
   useEffect(()=>{
     dispatch(fetchRecentLaunch());
-    console.log(recentlaunch);
   },[dispatch])
 
   return (

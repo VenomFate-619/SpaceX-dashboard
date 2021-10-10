@@ -3,13 +3,15 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin: 1rem;
 }
 
 .top > h2 {
   color: var(--text-secondary);
   font-weight: 100;
   font-size: 2.5rem;
-  letter-spacing: 3px;
+  letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .top > button {
@@ -29,4 +31,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+
+/* media query */
+@media only screen and (max-width: 481px)   {
+  .top
+  {
+    flex-direction: column;
+    align-items: center;
+  }
+  .top > h2
+  {
+    font-size: 2rem;
+  }
+  .top > button 
+  {
+    width: 100%;
+    margin: 15px;
+  }
 }

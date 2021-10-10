@@ -116,7 +116,6 @@ export const fetchUpcomingLaunch = (): AppThunk => async (dispatch) => {
       launchesUrl,
       UpcomingLaunchesQuery
     );
-    console.log(upcomingLaunchData);
     
     dispatch(getUpcomingLaunchData(upcomingLaunchData));
   } catch (error) {

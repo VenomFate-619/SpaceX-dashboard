@@ -18,6 +18,7 @@
 .time > h4 {
   color: var(--text-secondary);
   text-transform: uppercase;
+  font-weight: 300;
 }
 
 .dot {
@@ -27,6 +28,19 @@
 @media only screen and (max-width: 768px)   {
   .time > h2 {
   font-size: 5rem;
+}
+.dot {
+  font-size: 3rem;
+}
+.time > h4
+{
+  font-size: 13px;
+}
+}
+
+@media only screen and (max-width: 481px)   {
+  .time > h2 {
+  font-size: 3rem;
 }
 .dot {
   font-size: 3rem;

@@ -1,10 +1,8 @@
-import React from 'react'
-import moment from 'moment'
-import spaceX from '../../assets/spaceLauncher.png'
+import React, { SyntheticEvent } from "react";
 import styles from "./launchCard.module.css"
 import Button from '../button/Button'
 import ToolTip from '../tooltip/ToolTip'
-
+import fallBackImage from '../../assets/noImage.png'
 
 interface Props{
   src:string,
@@ -20,12 +18,21 @@ const giveTime  = (time:string) =>{
   return new Date(time).toDateString();
 }
 
+const handleFallback = (e: SyntheticEvent<HTMLImageElement, Event>) => {
+  e.currentTarget.src = fallBackImage;
+
+};
+
 const LaunchCard:React.FC<Props> = React.memo(({src,name,date,success,recovered,landingSuccess}) => {
     console.log(recovered)
     return (
       <>
         <div className={styles.cardBody}>
-          <img src={src} alt={name} />
+          <img
+            src={src ? src : fallBackImage}
+            alt={name}
+            onError={handleFallback}
+          />
           <div className={styles.name}>{name}</div>
           <div className={styles.date}>{giveTime(date)}</div>
           <div className={styles.icons}>

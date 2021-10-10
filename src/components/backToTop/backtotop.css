@@ -1,0 +1,25 @@
+.scrollToTop {
+  position: fixed;
+  cursor: pointer;
+  bottom: 2rem;
+  right: 20px;
+  background-color: var(--text-main);
+  z-index: 4;
+  width: 50px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.scrollToTop:hover {
+  background-color: rgb(6, 107, 210);
+  /* rgb(70 128 167); */
+}
+
+.scrollToTop span {
+  color: black;
+  font-size: 4rem;
+}

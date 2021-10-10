@@ -50,10 +50,77 @@ nav > a:hover::before {
 .change::before {
   width: 100%;
 }
+.hamburger {
+  display: none;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.hamburger-box
+{
+  width: 25px;
+}
+.hamburger:hover {
+    opacity: 1;
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  background-color: white;
+  width: 25px;
+  border-radius: 4px;
+}
+
+/* state change */
+.openNav {
+  clip-path: circle(140% at 150px 38px);
+}
 
 /* media query */
 @media only screen and (max-width: 768px) {
   nav > a {
     margin: 20px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .hamburger {
+    display: initial;
+    position: absolute;
+    top: 13px;
+    right: 25px;
+    background: #006fb8;
+  }
+  nav {
+    clip-path: circle(24px at 150px 38px);
+    flex-direction: column;
+    align-items: center;
+    background: rgb(16, 16, 16);
+    position: fixed;
+    top: 0;
+    width: 200px;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    left: initial;
+    z-index: 1000;
+    transition: 0.3s ease-in;
+  }
+  nav > a {
+    font-size: 1.5rem;
+    margin: 15px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  #root {
+    position: relative;
   }
 }
