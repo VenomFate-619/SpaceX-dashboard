@@ -18,8 +18,22 @@ const RecentLaunches: React.FC = () => {
         <h2>RECENT LAUNCHES</h2>
         <Button text="Show more" />
       </div>
+      {/* landing_success:- booster landing sucess 
+      recovered :- fairing recover
+      */}
       <main className={styles.main}>
-        {!loading && recentlaunch.docs.map((data) => <LaunchCard name={data?.name} key={data?.id} src={data?.links?.patch?.small} date={data?.date_utc} success={data?.success} recovered={data?.fairings?.recovered} landingSuccess={data?.cores[0]?.landing_success}  />)}
+        {!loading &&
+          recentlaunch.docs.map((data) => (
+            <LaunchCard
+              name={data?.name}
+              key={data?.id}
+              src={data?.links?.patch?.small}
+              date={data?.date_utc}
+              success={data?.success}
+              recovered={data?.fairings?.recovered}
+              landingSuccess={data?.cores[0]?.landing_success}
+            />
+          ))}
       </main>
     </div>
   );

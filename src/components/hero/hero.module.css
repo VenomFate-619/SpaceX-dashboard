@@ -26,8 +26,8 @@
 {
     margin-bottom: 1.5rem;
     text-align: center;
-    /* tablet */
-    /* white-space: nowrap; */
+    display: flex;
+    flex-wrap: wrap;
 }
 .nextLaunch > :nth-child(1) {
   text-transform: uppercase;
@@ -35,6 +35,7 @@
   font-size: 3rem;
   font-weight: 100;
   color: white;
+  margin-right: 5px;
 }
 
 .nextLaunch > :nth-child(2) {
@@ -65,15 +66,29 @@
   text-transform: uppercase;
 }
 
+@media only screen and (max-width:768px)
+{
+  .captionCon
+  {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+
 /* media query */
 @media only screen and (max-width: 481px)   {
   .imgCon
   {
     background-position: center center;
   }
+  .nextLaunch 
+  {
+     justify-content: center;
+  }
   .nextLaunch > :nth-child(1) 
   {
     font-size: 2rem;
+    margin-bottom: 12px;
   }
   .nextLaunch > :nth-child(2) 
   {

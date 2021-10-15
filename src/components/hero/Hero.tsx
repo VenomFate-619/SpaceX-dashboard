@@ -16,11 +16,11 @@ const Hero: React.FC = () => {
   return (
     <div className={styles.imgCon}>
       <div></div>
-      {!loading   && (
+      {!loading && (
         <div className={`${styles.captionCon}`}>
           <div className={styles.nextLaunch}>
-            <span>next launch: </span>
-            <span>{nextlaunch.docs[0]?.name}</span>
+            <div>next launch: </div>
+            <div>{nextlaunch.docs[0]?.name}</div>
           </div>
           <Timer time={nextlaunch.docs[0]?.date_local} />
           {/* elon mush quote */}

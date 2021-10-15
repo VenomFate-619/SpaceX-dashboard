@@ -2,7 +2,8 @@
   color: rgb(0, 111, 185);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  width: 100%;
 }
 .time {
   display: flex;
