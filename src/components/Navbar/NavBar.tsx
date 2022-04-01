@@ -5,7 +5,8 @@ import { Link, useLocation } from "react-router-dom";
 interface listOfNav
 {
   path:string,
-  name:string
+  name:string,
+  key: number
 }
 
 const NavBar: React.FC = () => {
@@ -24,11 +25,11 @@ const NavBar: React.FC = () => {
     if(open) handleClick();
   }
   const listOfNav: listOfNav[] = [
-    { path: "/", name: "Home" },
-    {path:"/launches" , name:"Launches"},
-    { path: "/vehicles", name: "Vehicles" },
+    { path: "/", name: "Home" ,key:100},
+    {path:"/launches" , name:"Launches" ,key:101  },
+    { path: "/vehicles", name: "Vehicles" , key:102 },
     // { path: "/roadster", name: "Roadster" },
-    { path: "/about", name: "About" },
+    { path: "/about", name: "About" , key:103 },
   ];
   return (
     <>
@@ -50,6 +51,7 @@ const NavBar: React.FC = () => {
             to={x.path}
             className={location.pathname === x.path ? "change" : " "}
             onClick={handleClick}
+            key={x.key}
           >
             {x.name}
           </Link>

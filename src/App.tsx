@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./pages/about/About";
 import LaunchesPage from "./pages/launches/LaunchesPage";
 import Vehicles from "./pages/vehicles/Vehicles";
+import LaunchById from "./pages/launchById/LaunchById";
 
 const App: React.FC = () => {
   return (
@@ -15,7 +16,8 @@ const App: React.FC = () => {
         <NavBar />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route  path="/launches" component={LaunchesPage}/>
+          <Route path="/launch/:id" component={LaunchById} />
+          <Route path="/launches" component={LaunchesPage}/>
           <Route path="/vehicles" component={Vehicles} />
           <Route path="/about" component={About} />
         </Switch>

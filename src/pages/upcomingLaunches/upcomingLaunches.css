@@ -1,7 +1,11 @@
-.upcoming_text
-{
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    text-align: center;
-    white-space: pre-line;
+.container {
+  display: grid;
+  grid-row-gap: 2em;
+}
+
+.upcoming_text {
+  /* margin-bottom: 1.5rem; */
+  font-size: 2rem;
+  text-align: center;
+  white-space: pre-line;
 }

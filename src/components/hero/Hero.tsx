@@ -15,7 +15,6 @@ const Hero: React.FC = () => {
 
   return (
     <div className={styles.imgCon}>
-      <div></div>
       {!loading && (
         <div className={`${styles.captionCon}`}>
           <div className={styles.nextLaunch}>

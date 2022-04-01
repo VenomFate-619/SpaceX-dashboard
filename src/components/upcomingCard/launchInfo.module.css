@@ -39,53 +39,48 @@ h3 {
 
 .info {
   display: grid;
-  grid-template-rows: max-content max-content;
-  grid-template-columns: max-content max-content max-content max-content;
+  grid-template-rows: max-content max-content max-content;
+  grid-template-columns: max-content 1fr;
   grid-gap: 10px 10px;
   margin-top: 10px;
 }
 
 .info > h2,
-.info >h3 {
+.info > h3 {
   font-size: 1rem;
   font-weight: 400;
 }
-.info h2{
+.info h2 {
   color: rgb(190, 192, 196);
 }
 
 .info h3 {
   color: white;
+  font-size: 0.8rem;
 }
 
-.cardBody > img
-{
-    position: absolute;
-    bottom: -9px;
-    right: -5px;
+.cardBody > img {
+  position: absolute;
+  bottom: -9px;
+  right: -5px;
 }
 
 /* media query */
-@media only screen and (max-width: 768px)   {
-  .info
-  {
+@media only screen and (max-width: 768px) {
+  .info {
     grid-template-rows: max-content max-content max-content;
     grid-template-columns: max-content auto;
   }
 }
-@media only screen and (max-width: 481px)   {
-  .number 
-  {
+@media only screen and (max-width: 481px) {
+  .number {
     top: 60%;
     font-size: 1rem;
   }
-  .cardBody > img
-  {
+  .cardBody > img {
     width: 60px;
   }
-  .cardBody
-  {
+  .cardBody {
     padding: 0.5rem;
   }
-  
 }

@@ -21,14 +21,16 @@ const Upcoming: React.FC<Props> = ({ launchInfo }) => {
         <h2>Launch Site :</h2>
         <h3>{launchInfo.launchpad.full_name}</h3>
         <h2>Customer :</h2>
-        <h3>{launchInfo.payloads[0].customers[0]}</h3>
+        <h3>{launchInfo.payloads[0]?.customers[0]}</h3>
       </div>
-      <img
-        src={`https://www.countryflags.io/${getCountryCode(
-          launchInfo.payloads[0].nationalities[0]
-        )}/flat/64.png`}
-        alt={`${launchInfo.payloads[0].nationalities[0]}Flag`}
-      />
+      {launchInfo.payloads[0]?.nationalities[0] && (
+        <img
+          src={`https://flagcdn.com/w80/${getCountryCode(
+            launchInfo.payloads[0].nationalities[0]
+          )?.toLowerCase()}.png`}
+          alt={`${launchInfo.payloads[0].nationalities[0]}Flag`}
+        />
+      )}
     </div>
   );
 };

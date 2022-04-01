@@ -20,7 +20,7 @@ const ToolTip: React.FC<Props> = ({ text, children }) => {
     >
       {children}
       <div className={styles.toolTip} ref={display}>
-        {text}
+        {text.split(" ")[0] }  <br/>  {text.split(" ")[1]}
       </div>
     </div>
   );

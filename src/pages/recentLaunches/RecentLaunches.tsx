@@ -27,6 +27,7 @@ const RecentLaunches: React.FC = () => {
             <LaunchCard
               name={data?.name}
               key={data?.id}
+              id={data?.id}
               src={data?.links?.patch?.small}
               date={data?.date_utc}
               success={data?.success}
