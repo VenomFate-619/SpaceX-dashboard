@@ -23,3 +23,23 @@ button:hover {
   color: var(--main-background);
   background-color: var(--secondary-background);
 }
+
+/* fixing slider */
+.image-gallery-left-nav,
+.image-gallery-right-nav,
+.image-gallery-fullscreen-button,
+.image-gallery-bullets .image-gallery-bullet {
+  width: unset;
+  margin: 0;
+  font-size: initial;
+}
+
+.image-gallery-slide .image-gallery-image {
+  width: unset !important;
+}
+
+.image-gallery-left-nav:hover,
+.image-gallery-right-nav:hover {
+  background-color: unset;
+  box-shadow: unset;
+}

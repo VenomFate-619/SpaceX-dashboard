@@ -28,6 +28,31 @@ export const RecentLaunchesQuery = {
         select: {
           landing_success: 1,
         },
+        populate: [
+          {
+            path: "landpad",
+            select: {
+              name: 1,
+              full_name: 1,
+              landing_success: 1,
+            },
+          },
+        ],
+      },
+      "payloads",
+      {
+        path: "launchpad",
+        select: {
+          name: 1,
+          full_name: 1,
+        },
+      },
+      {
+        path: "rocket",
+        select: {
+          name: 1,
+          id: 1,
+        },
       },
     ],
     sort: {

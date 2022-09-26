@@ -26,7 +26,7 @@ const handleFallback = (e: SyntheticEvent<HTMLImageElement, Event>) => {
 };
 
 const LaunchCard:React.FC<Props> = React.memo(({src,name,date,success,recovered,landingSuccess,id}) => {
-    console.log(recovered);
+   
     return (
         <Link to={`/launch/${id}`}>
           <div className={styles.cardBody}>

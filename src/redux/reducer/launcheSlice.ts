@@ -101,7 +101,7 @@ export const fetchRecentLaunch = (): AppThunk => async (dispatch) => {
       launchesUrl,
       RecentLaunchesQuery
     );    
-    console.log(recentLaunchData);
+   
     
     dispatch(getRecentLaunchData(recentLaunchData));
   } catch (error) {

@@ -6,4 +6,6 @@ export interface Payloads {
   norad_ids: [];
   nationalities: string[];
   manufacturers: [];
+  id: string;
+  discriminator: "payload";
 }

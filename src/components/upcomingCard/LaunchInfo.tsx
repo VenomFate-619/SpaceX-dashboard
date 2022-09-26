@@ -2,23 +2,24 @@ import React from "react";
 import { getCountryCode } from "../../content/countryCode";
 import  styles from "./launchInfo.module.css";
 import ToolTip from "../tooltip/ToolTip";
-
+import giveTime from "../../util/convertTime";
+import { Launches} from "../../redux/types/Launches";
 interface Props {
-  launchInfo: { flag: boolean; src: string };
+  launchInfo: Launches;
 }
 const LaunchInfoCard: React.FC<Props> = ({ launchInfo }) => {
   return (
     <div className={styles.cardBody}>
       <div className={styles.top}>
-        <h3>Starlink 4-10 (v1.5)</h3>
-        <div className={styles.number}>#153</div>
-        <div className={styles.date}>Tue Mar 08 2022</div>
+        <h3>{launchInfo.name}</h3>
+        <div className={styles.number}>#{launchInfo.flight_number}</div>
+        <div className={styles.date}>{giveTime(launchInfo.date_utc)}</div>
       </div>
       <div className={styles.info}>
         <h2>Rocket :</h2>
-        <h3>Falcon 9</h3>
+        <h3>{launchInfo.rocket.name}</h3>
         <h2>Launch Site :</h2>
-        <h3>Cape Canaveral Space Force Station Space Launch Complex </h3>
+        <h3>{launchInfo.launchpad.full_name}</h3>
         <h2>Mission Status</h2>
         <div  style={{display:"flex" , gap:"12px"}} >
           <ToolTip text="Misson Successfull">
@@ -65,12 +66,12 @@ const LaunchInfoCard: React.FC<Props> = ({ launchInfo }) => {
           </ToolTip>
         </div>
       </div>
-      {launchInfo.flag && (
+      {launchInfo?.payloads[0]?.nationalities[0] && (
         <img
-          src={`https://www.countryflags.io/${getCountryCode(
-            launchInfo.src
-          )}/flat/64.png`}
-          alt={`${launchInfo.src}Flag`}
+          src={`https://flagcdn.com/w80/${getCountryCode(
+            launchInfo.payloads[0].nationalities[0]
+          )?.toLowerCase()}.png`}
+          alt={`${launchInfo.payloads[0].nationalities[0]}Flag`}
         />
       )}
     </div>

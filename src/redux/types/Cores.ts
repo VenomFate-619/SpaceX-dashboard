@@ -7,5 +7,6 @@ export interface Cores {
   landing_attempt: boolean;
   landing_success: boolean;
   landing_type: string;
-//   landpad: Landpad;
+  landpad: { name: string; full_name: string; landing_success: boolean };
+  discriminator: "core";
 }
