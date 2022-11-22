@@ -81,15 +81,23 @@ const LaunchById: React.FC = (props: any) => {
         {/* table info*/}
         <div className={styles.tableInfo}>
           {/* payload */}
-          {/* {
-            dataByStore.payloads.map((x,i)=>(
-              <Info data={x} type="core" key={x.id} index={i + 1} />
-            ))
-          } */}
+          {dataByStore.payloads.map((x, i) => (
+            <Info
+              data={{ ...x, discriminator: "payload" }}
+              type="payload"
+              key={x.id}
+              index={i + 1}
+            />
+          ))}
           <div style={{ marginTop: "3rem" }}></div>
           {/* cores */}
           {dataByStore.cores.map((x, i) => (
-            <Info data={ {...x , discriminator:"core"} } type="core" key={x.core} index={i + 1} />
+            <Info
+              data={{ ...x, discriminator: "core" }}
+              type="core"
+              key={x.core}
+              index={i + 1}
+            />
           ))}
         </div>
 

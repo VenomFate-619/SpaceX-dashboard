@@ -8,4 +8,5 @@ export interface Payloads {
   manufacturers: [];
   id: string;
   discriminator: "payload";
+  orbit: string
 }
